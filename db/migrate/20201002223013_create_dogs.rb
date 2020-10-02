@@ -12,7 +12,7 @@ class CreateDogs < ActiveRecord::Migration[6.0]
       t.text :bio
       t.string :medication
       t.integer :caretaker_id
-      t.intenger :user_id
+      t.integer :user_id
 
       t.timestamps
     end

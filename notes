@@ -12,7 +12,7 @@ house_trained-boolean
 good_with (kids, dogs, cats)string
 size(small, medium, large)string
 bio-text
-adoption_pending-boolean
+medication-string
 caretaker_id- integer
 user_id- integer 
 
@@ -23,7 +23,7 @@ has_many pets
 attributes:
 name-string
 location-string
-type-string
+setting-string
 
 
 
