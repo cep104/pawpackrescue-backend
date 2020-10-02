@@ -12,6 +12,9 @@ house_trained-boolean
 good_with (kids, dogs, cats)string
 size(small, medium, large)string
 bio-text
+adoption_pending-boolean
+caretaker_id- integer
+user_id- integer 
 
 
 Caretakers

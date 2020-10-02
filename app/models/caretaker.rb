@@ -1,0 +1,2 @@
+class Caretaker < ApplicationRecord
+end
