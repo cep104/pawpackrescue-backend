@@ -1,0 +1,33 @@
+Dog
+relationship:
+belongs_to: caretaker
+belongs_to: user
+attributes:
+name-string
+rescued_dat-date
+age-integer
+gender-string
+breed-string
+house_trained-boolean 
+good_with (kids, dogs, cats)string
+size(small, medium, large)string
+bio-text
+
+
+Caretakers
+relationship:
+has_many pets
+attributes:
+name-string
+location-string
+type-string
+
+
+
+User: 
+relationship:
+has_many: dogs
+attributes:
+name-string
+email-string
+password_digest-string
