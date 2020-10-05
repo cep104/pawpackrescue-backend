@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :dogs
-      resources :users
-      resources :caretakers
+      resources :users do
+        resources :dogs
+      end
+      resources :caretakers do
+        resources :dogs
+      end
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
