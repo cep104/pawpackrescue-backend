@@ -6,6 +6,7 @@ class Api::V1::CaretakersController < ApplicationController
     end
 
     def create
+        binding.pry
         @caretaker = Caretaker.new(caretaker_params)
     
             if @caretaker.save
@@ -31,7 +32,7 @@ class Api::V1::CaretakersController < ApplicationController
         @caretaker = Caretaker.find(params[:id])
     end
 
-    def user_params
-        params.require(:user).permit(:name, :email, :password, dog_ids: [], dog_attributes:[:name, :bio])
+    def caretaker_params
+        params.require(:caretaker).permit(:name, :location, :setting)
     end
 end
