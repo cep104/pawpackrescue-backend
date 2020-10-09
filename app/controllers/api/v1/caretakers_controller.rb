@@ -6,7 +6,7 @@ class Api::V1::CaretakersController < ApplicationController
     end
 
     def create
-        binding.pry
+        
         @caretaker = Caretaker.new(caretaker_params)
     
             if @caretaker.save
