@@ -27,11 +27,15 @@ class Api::V1::DogsController < ApplicationController
           else
             render json: @dog.errors, status: :unprocessable_entity
           end
+          
 
     end
 
     def destroy
-        @dog.destroy
+        dog = Dog.find(params[:id])
+        caretaker = Caretaker.find(dog.caretaker_id)
+        dog.destroy
+        render json: caretaker
     end
 
     private 
