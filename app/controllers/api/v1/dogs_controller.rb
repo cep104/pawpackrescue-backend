@@ -1,6 +1,6 @@
 class Api::V1::DogsController < ApplicationController
     # before_action :set_dog, only: [:show, :update, :destroy]
-    before_action :set_caretaker
+    before_action :set_caretaker, only: [:create, :delete]
     def index
         @dogs = Dog.all
         render json: @dogs
@@ -18,7 +18,8 @@ class Api::V1::DogsController < ApplicationController
     end
 
     def show
-        render json: @dog
+        dog = Dog.find(params[:id])
+        render json: dog
     end
 
     def update
