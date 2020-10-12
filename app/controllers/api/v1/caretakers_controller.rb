@@ -22,7 +22,7 @@ class Api::V1::CaretakersController < ApplicationController
 
     def update
         caretaker = Caretaker.find(params[:id])
-        caretaker.update(name: params['caretaker']['name'])
+        caretaker.update(caretaker_params)
         caretaker.save
         render json: caretaker
     end
