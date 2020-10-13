@@ -49,7 +49,7 @@ class Api::V1::DogsController < ApplicationController
     # end
 
     def dog_params
-        params.require(:dog).permit(:name, :age, :gender, :breed, :house_trained, :good_with, :size, :bio, :medication, :caretaker_id)
+        params.require(:dog).permit(:name, :age, :gender, :breed, :house_trained, :good_with, :size, :bio, :medication, :caretaker_id, :img_src)
     end
 
 
