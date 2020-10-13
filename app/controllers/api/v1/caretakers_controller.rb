@@ -23,8 +23,11 @@ class Api::V1::CaretakersController < ApplicationController
     def update
         caretaker = Caretaker.find(params[:id])
         caretaker.update(caretaker_params)
-        caretaker.save
-        render json: caretaker
+        if caretaker.save
+            render json: caretaker 
+        else
+        render json: {error:'All fields need to be filled out'}
+        end
     end
 
     def destroy
