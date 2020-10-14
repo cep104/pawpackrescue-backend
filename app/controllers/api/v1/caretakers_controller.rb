@@ -40,6 +40,6 @@ class Api::V1::CaretakersController < ApplicationController
     end
 
     def caretaker_params
-        params.require(:caretaker).permit(:name, :location, :setting)
+        params.require(:caretaker).permit(:name, :location, :setting, :img_src)
     end
 end
